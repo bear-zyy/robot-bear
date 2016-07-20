@@ -8,8 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "iflyMSC/iflyMSC.h"
 
+@class IFlySpeechRecognizer;
+
+@interface ViewController : UIViewController<UIActionSheetDelegate,IFlySpeechRecognizerDelegate,IFlyRecognizerViewDelegate>
+
+@property (nonatomic, strong) NSString *pcmFilePath;//音频文件路径
+
+@property (nonatomic, strong) IFlySpeechRecognizer *iFlySpeechRecognizer;//不带界面的识别对象
+
+@property (nonatomic, strong) IFlyRecognizerView *iflyRecognizerView;//带界面的识别对象
+
+@property (nonatomic, strong) NSString * result;
+
+@property (nonatomic, assign) BOOL isCanceled;
 
 @end
 
