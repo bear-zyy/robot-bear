@@ -157,10 +157,8 @@
             NSLog(@"%@",text);
         }
         
-//        [_popUpView showText: text];
-        
     }else {
-//        [_popUpView showText:@"识别结束"];
+
         NSLog(@"errorCode:%d",[error errorCode]);
     }
 
