@@ -8,10 +8,14 @@
 
 #import "SignView.h"
 #import "SignModel.h"
+#import "Masonry.h"
+#import "ColorModel.h"
+
 @implementation SignView{
 
     NSMutableArray * stepArray;
     
+    UIColor * color;
 }
 
 /*
@@ -30,22 +34,55 @@
 
         self.backgroundColor =[UIColor  grayColor];
         
+        color = [UIColor blackColor];
+        
         stepArray = [NSMutableArray array];
         
-    
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reset:) name:@"reset" object:nil];
+        
+//        UIView * view = [[UIView alloc]init];
+//        view.backgroundColor = [UIColor grayColor];
+//        [self addSubview:view];
+//        
+//        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+//           
+//            make.left.and.right.and.top.mas_equalTo(self);
+//            make.height.mas_equalTo(100);
+//            
+//        }];
+        
+        
+        
     }
     
     return self;
 
 }
 
+-(void)reset:(NSNotification*)noti{
+
+    [stepArray removeAllObjects];
+    [self setNeedsDisplay];
+    
+}
+
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 
+    CGPoint movePoint = [[touches anyObject] locationInView:self];
+    
+    if (movePoint.y>100) {
+        return;
+    }
+    
     SignModel * model = [[SignModel alloc]init];
     
-    model.clo = [UIColor redColor];
+//    model.clo = color;
     
-    model.value = 2.0;
+    ColorModel * mod = [ColorModel standard];
+    
+    model.clo = mod.color;
+    
+    model.value = mod.value;
     
     model.paths = [NSMutableArray array];
     
@@ -62,9 +99,14 @@
     
     NSLog(@"  x:%f   y:%f",movePoint.x,movePoint.y);
     
-    
-    
     [model.paths addObject:[NSValue valueWithCGPoint:movePoint]];
+    
+//    if (movePoint.y>100) {
+//        return;
+//    }
+    
+    
+    
     
     
     //通知重新渲染界面，这个方法会重新调用UIView的drawRect:(CGRect)rect方法

@@ -24,6 +24,7 @@
 		D00825D71D474E960089B0D2 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D00825CD1D474E960089B0D2 /* View+MASAdditions.m */; };
 		D00825DA1D47503F0089B0D2 /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = D00825D91D47503F0089B0D2 /* SignView.m */; };
 		D00825DD1D4756240089B0D2 /* SignModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D00825DC1D4756240089B0D2 /* SignModel.m */; };
+		D01937391D485BD0008FEE86 /* ColorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D01937381D485BD0008FEE86 /* ColorModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		D00825D91D47503F0089B0D2 /* SignView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignView.m; sourceTree = "<group>"; };
 		D00825DB1D4756240089B0D2 /* SignModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignModel.h; sourceTree = "<group>"; };
 		D00825DC1D4756240089B0D2 /* SignModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignModel.m; sourceTree = "<group>"; };
+		D01937371D485BD0008FEE86 /* ColorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorModel.h; sourceTree = "<group>"; };
+		D01937381D485BD0008FEE86 /* ColorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 				D00825B71D474E960089B0D2 /* Masonry */,
 				D00825A31D474E530089B0D2 /* AppDelegate.h */,
 				D00825A41D474E530089B0D2 /* AppDelegate.m */,
+				D01937371D485BD0008FEE86 /* ColorModel.h */,
+				D01937381D485BD0008FEE86 /* ColorModel.m */,
 				D00825A61D474E530089B0D2 /* ViewController.h */,
 				D00825A71D474E530089B0D2 /* ViewController.m */,
 				D00825D81D47503E0089B0D2 /* SignView.h */,
@@ -231,6 +236,7 @@
 				D00825DD1D4756240089B0D2 /* SignModel.m in Sources */,
 				D00825D21D474E960089B0D2 /* MASLayoutConstraint.m in Sources */,
 				D00825DA1D47503F0089B0D2 /* SignView.m in Sources */,
+				D01937391D485BD0008FEE86 /* ColorModel.m in Sources */,
 				D00825A21D474E530089B0D2 /* main.m in Sources */,
 				D00825D71D474E960089B0D2 /* View+MASAdditions.m in Sources */,
 				D00825D31D474E960089B0D2 /* MASViewAttribute.m in Sources */,
@@ -386,6 +392,7 @@
 				D00825B61D474E530089B0D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
