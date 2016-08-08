@@ -114,6 +114,7 @@
     
 }
 
+#pragma mark 从写drawRect方法
 -(void)drawRect:(CGRect)rect{
 
     [super drawRect:rect];
