@@ -18,9 +18,6 @@
     [super viewDidLoad];
     
     UIWebView * web = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    
-//    NSString * string = @"http://v.qq.com/page/o/l/g/o0306a6d2lg.html";
-//    
 //    NSURL * url = [NSURL URLWithString:string];
 //    
     web.delegate = self;
@@ -60,6 +57,7 @@
     
     
     NSString * string1 = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    
     
     NSLog(@"++++++++%@-----%@",currentURL,string1);
     
